@@ -12,12 +12,9 @@ class Solution {
             if (scoreList.size() > k) {
                 scoreList.remove(Collections.min(scoreList));
             }
-            for (int j = 0; j < scoreList.size(); j++) {
-                answer[i] = Collections.min(scoreList);
-            }
+            
+            answer[i] = Collections.min(scoreList);
         }
-        
-        System.out.println(scoreList);
         
         return answer;
     }

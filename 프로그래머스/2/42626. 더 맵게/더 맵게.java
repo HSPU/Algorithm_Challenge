@@ -3,15 +3,22 @@ import java.util.*;
 class Solution {
     public int solution(int[] scoville, int K) {
         int cnt = 0;
-        PriorityQueue<Integer> que = new PriorityQueue<>();
+        List<Integer> list = new ArrayList<>();
         
-        for (int i : scoville) que.add(i);
-        // System.out.println(que);
+        for (int i : scoville) list.add(i);
+        // System.out.println(list);
         
-        while (que.peek() < K) {
-            if (que.size() == 1) return -1;
-            que.add(que.poll() + que.poll() * 2);
-            cnt++;
+        Collections.sort(list);
+        for (int i = 0; i < list.size(); i++) {
+        int mix = list.get(0) + list.get(1) * 2;
+            while (list.get(i) < K) {
+                // if (list.get(i) < K) return -1;
+                Collections.sort(list);
+                list.add(mix);
+                list.remove(0);
+                list.remove(0);
+                cnt++;
+            }
         }
         return cnt;
     }

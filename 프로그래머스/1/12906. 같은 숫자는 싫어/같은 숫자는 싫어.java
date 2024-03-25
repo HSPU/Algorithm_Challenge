@@ -11,6 +11,11 @@ public class Solution {
             if (arr[i] == arr[i - 1]) st.pop();
         }
         
+        // for (int i = 0; i < arr.length; i++) {
+        //     if (st.isEmpty()) st.push(arr[i]);
+        //     else if (st.peek() != arr[i]) st.push(arr[i]);
+        // }
+        
         int[] answer = new int[st.size()];
         for (int i = answer.length - 1; i >= 0; i--) answer[i] = st.pop();
         

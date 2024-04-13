@@ -16,7 +16,7 @@ class Solution {
         Set<Integer> set = new HashSet<>(list);
         List<Integer> list2 = new ArrayList<>(set);
         Collections.sort(list2);
-        System.out.println(list2);
+        // System.out.println(list2);
         return list2;
     }
 }

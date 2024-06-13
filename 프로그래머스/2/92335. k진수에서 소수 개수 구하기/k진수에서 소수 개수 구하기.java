@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public int solution(int n, int k) {
-        String trans = Long.toString(n, k);
+        String trans = Integer.toString(n, k);
         String[] str = trans.split("[0]+");
         
         int cnt = 0;
